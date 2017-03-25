@@ -1,0 +1,19 @@
+.navbar-nav > .user-menu > .dropdown-menu {
+  width: 0px;
+}
+
+.dropdown-menu {
+  min-width: 115px;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer {
+  padding: 0px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  font-weight: bold;
+  background-color: #d9534f;
+}
