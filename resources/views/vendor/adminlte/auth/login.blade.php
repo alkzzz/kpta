@@ -9,7 +9,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/') }}"><b>Fakultas</b> Teknik</a>
+                <h1><b>Fakultas Teknik</b></h1>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)

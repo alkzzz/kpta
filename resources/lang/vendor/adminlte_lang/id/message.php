@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'logged'                  => 'Selamat Datang',
+    'logged'                  => 'Selamat Datang Admin',
     'someproblems'            => 'There were some problems with your input.',
     'siginsession'            => 'Sign in to start your session',
     'remember'                => 'Remember Me',

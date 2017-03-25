@@ -23,27 +23,30 @@ AdminMenu::macro('adminlteMenu', function () {
 AdminMenu::macro('adminlteSeparator', function ($title) {
     return Html::raw($title)->addParentClass('header');
 });
-AdminMenu::macro('sidebar', function () {
+AdminMenu::macro('fakultas', function () {
     return AdminMenu::adminlteMenu()
         //->add(Html::raw('HEADER')->addParentClass('header'))
         ->action('HomeController@index', 'Dashboard')
+        ->add(Link::to('rekap','Rekap'))
+        ->add(Link::to('#','Manajemen Dosen'))
+        ->add(Link::to('#','Manajemen Kegiatan'))
         //->link('http://www.acacha.org', 'Another link')
 //        ->url('http://www.google.com', 'Google')
         //->add(Menu::adminlteSeparator('Acacha Adminlte'))
         #adminlte_menu
         //->add(Menu::adminlteSeparator('SECONDARY MENU'))
-        ->add(AdminMenu::new()->prepend('<a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>')
-            ->addParentClass('treeview')
-            ->add(Link::to('/link1', 'Link1'))->addClass('treeview-menu')
-            ->add(Link::to('/link2', 'Link2'))
-            //->url('http://www.google.com', 'Google')
-            //->add(Menu::new()->prepend('<a href="#"><span>Multilevel 2</span> <i class="fa fa-angle-left pull-right"></i></a>')
-            //    ->addParentClass('treeview')
-            //    ->add(Link::to('/link21', 'Link21'))->addClass('treeview-menu')
-            //    ->add(Link::to('/link22', 'Link22'))
-            //    ->url('http://www.google.com', 'Google')
-            //)
-        )
+        // ->add(AdminMenu::new()->prepend('<a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>')
+        //     ->addParentClass('treeview')
+        //     ->add(Link::to('/link1', 'Link1'))->addClass('treeview-menu')
+        //     ->add(Link::to('/link2', 'Link2'))
+        //     //->url('http://www.google.com', 'Google')
+        //     //->add(Menu::new()->prepend('<a href="#"><span>Multilevel 2</span> <i class="fa fa-angle-left pull-right"></i></a>')
+        //     //    ->addParentClass('treeview')
+        //     //    ->add(Link::to('/link21', 'Link21'))->addClass('treeview-menu')
+        //     //    ->add(Link::to('/link22', 'Link22'))
+        //     //    ->url('http://www.google.com', 'Google')
+        //     //)
+        // )
 //        ->add(
 //            Menu::fullsubmenuexample()
 //        )
@@ -53,5 +56,12 @@ AdminMenu::macro('sidebar', function () {
 //                ->add(Link::to('/profile', 'Profile'))
 //                ->url('http://www.google.com', 'Google')
 //        )
+        ->setActiveFromRequest();
+});
+
+AdminMenu::macro('prodi', function() {
+        return AdminMenu::adminlteMenu()
+        ->action('HomeController@index', 'Dashboard')
+        ->add(Link::to('#','Input Data'))
         ->setActiveFromRequest();
 });

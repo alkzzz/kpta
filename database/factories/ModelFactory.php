@@ -16,11 +16,25 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => 'Administrator',
+        'name' => 'Fakultas Teknik',
         'username' => 'admin',
         'email' => 'admin@admin.com',
         'password' => bcrypt('admin'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->defineAs(Spatie\Permission\Models\Role::class, 'fakultas', function (Faker\Generator $faker) {
+
+    return [
+        'name' => 'Fakultas',
+    ];
+});
+
+$factory->defineAs(Spatie\Permission\Models\Role::class, 'prodi', function (Faker\Generator $faker) {
+
+    return [
+        'name' => 'Prodi',
     ];
 });
 

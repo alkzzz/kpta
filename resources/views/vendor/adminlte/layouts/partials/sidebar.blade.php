@@ -19,7 +19,11 @@
         @endif
 
         <!-- Sidebar Menu -->
-        {{ Menu::sidebar() }}
+        @role('Fakultas')
+        {{ Menu::fakultas() }}
+        @else
+        {{ Menu::prodi() }}
+        @endrole
         <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

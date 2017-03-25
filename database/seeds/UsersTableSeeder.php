@@ -12,5 +12,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         factory(App\User::class)->create();
+        factory(Spatie\Permission\Models\Role::class, 'fakultas')->create();
+        factory(Spatie\Permission\Models\Role::class, 'prodi')->create();
     }
 }

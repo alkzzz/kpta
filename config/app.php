@@ -173,9 +173,11 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Tinker\TinkerServiceProvider::class,
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         Spatie\Menu\Laravel\MenuServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
         //
 
         /*
