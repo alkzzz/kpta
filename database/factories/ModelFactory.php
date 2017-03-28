@@ -38,6 +38,14 @@ $factory->defineAs(Spatie\Permission\Models\Role::class, 'prodi', function (Fake
     ];
 });
 
+$factory->define(App\Dosen::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'nama' => $faker->name,
+    ];
+});
+
 $factory->defineAs(App\Menu::class, 'menu', function (Faker\Generator $faker) {
     return [
         'position' => $faker->unique()->numberBetween($min = 1, $max = 10),

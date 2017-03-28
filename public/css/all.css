@@ -21569,6 +21569,9 @@ label,
 .checkbox label {
   font-weight: 300;
 }
+.form-control {
+  color: #222;
+}
 
 /*# sourceMappingURL=adminlte-app.css.map */
 

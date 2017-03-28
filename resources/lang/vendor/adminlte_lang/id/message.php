@@ -14,7 +14,7 @@ return [
     */
 
     'logged'                  => 'Selamat Datang Admin',
-    'someproblems'            => 'There were some problems with your input.',
+    'someproblems'            => 'Terdapat kesalahan pada input yang anda masukkan.',
     'siginsession'            => 'Sign in to start your session',
     'remember'                => 'Remember Me',
     'buttonsign'              => 'Sign In',
