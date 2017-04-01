@@ -3,7 +3,7 @@
 use Spatie\Menu\Laravel\Menu as AdminMenu;
 use Spatie\Menu\Laravel\Html;
 use Spatie\Menu\Laravel\Link;
-use Carbon\Carbon;
+use Jenssegers\Date\Date;
 
 //Menu::macro('fullsubmenuexample', function () {
 //    return Menu::new()->prepend('<a href="#"><span> Multilevel PROVA </span> <i class="fa fa-angle-left pull-right"></i></a>')
@@ -62,11 +62,12 @@ AdminMenu::macro('fakultas', function () {
 
 
 AdminMenu::macro('prodi', function() {
-        $now = Carbon::now();
+        $now = Date::now();
         $bulan = $now->month;
+        $nama_bulan =  strtolower(Date::createFromFormat('!m', $bulan)->format("F"));
         $tahun = $now->year; 
         return AdminMenu::adminlteMenu()
         ->add(Link::to(url('/'), 'Dashboard'))
-        ->add(Link::to(url('/seminar/'.$bulan.'/'.$tahun),'Input Jadwal Seminar TA'))
+        ->add(Link::to(url('/seminar/'.$nama_bulan.'/'.$tahun),'Input Jadwal Seminar TA'))
         ->setActiveFromRequest();
 });

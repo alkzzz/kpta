@@ -175,6 +175,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        Nwidart\Modules\LaravelModulesServiceProvider::class,
         Spatie\Menu\Laravel\MenuServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
@@ -237,6 +238,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Module' => Nwidart\Modules\Facades\Module::class,
         'AdminMenu' => Spatie\Menu\Laravel\MenuFacade::class,
         'Menu' => Lavary\Menu\Facade::class,
         /*
