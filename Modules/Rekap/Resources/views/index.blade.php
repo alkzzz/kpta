@@ -1,9 +1,22 @@
-@extends('rekap::layouts.master')
+@extends('adminlte::layouts.app')
 
-@section('content')
-    <h1>Hello World</h1>
+@section('htmlheader_title')
+	{{ trans('adminlte_lang::message.home') }}
+@endsection
 
-    <p>
-        This view is loaded from module: {!! config('rekap.name') !!}
-    </p>
-@stop
+
+@section('main-content')
+	<div class="container-fluid spark-screen">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-heading">Home</div>
+
+					<div class="panel-body">
+						{{ trans('adminlte_lang::message.logged') }} {{ Auth::user()->name }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+@endsection
